@@ -474,7 +474,7 @@
   .sponsor-benefits {
       position: relative;
       background: linear-gradient(135deg, rgba(65, 64, 56, 0.6), rgba(0,0,0,0.9)), 
-                  url('images/glassclad-skyscrapers-central-mumbai-reflecting-sunset-hues-blue-hour.jpg') center/cover no-repeat;
+                  url('images/back.avif') center/cover no-repeat;
       padding: 80px 0;
     }
 
