@@ -41,7 +41,7 @@
     <div class="collapse navbar-collapse justify-content-center d-none d-lg-block">
       <ul class="navbar-nav w-100 justify-content-center">
         <!-- Left Menu -->
-        <li class="nav-item"><a class="nav-link"   href="index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" style="background-color: black;color: white;"   href="index.html">HOME</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
 
         <!-- Dropdown for OUR PARTNERS -->
@@ -81,7 +81,7 @@
     GALLERY
   </a>
 </li>
-        <li class="nav-item"><a class="nav-link" style="background-color: black;color: white;" href="contact.html">CONTACT</a></li>
+        <li class="nav-item"><a class="nav-link"  href="contact.html">CONTACT</a></li>
       </ul>
     </div>
   </div>
@@ -135,101 +135,516 @@
   </div>
 </div>
 
-<div class="container-fluid" style="padding: 0px;overflow: hidden;">
-  <div class="row">
-    <div class="col-lg-12">
-      <img src="images/contactban.png" width="100%" alt="">
+<div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel" >
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active rounded-circle"></button>
+    <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1" class="rounded-circle"></button>
+    <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2" class="rounded-circle"></button>
+  </div>
+
+  <!-- Slides -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/banthree.png" class="d-block w-100 img-fluid" loading="lazy" alt="Banner 1">
+    </div>
+    <div class="carousel-item">
+      <img src="images/bantwo.png" class="d-block w-100 img-fluid" loading="lazy" alt="Banner 2">
+    </div>
+    <div class="carousel-item">
+      <img src="images/banone.png" class="d-block w-100 img-fluid" loading="lazy" alt="Banner 3">
     </div>
   </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
 </div>
 
- <section class="contact-section">
+<section class="awaits-section">
     <div class="container">
-      <h2 class="contact-title">Get in Touch</h2>
-      <div class="row align-items-center g-5">
-        
-        <!-- Left Side Image -->
-        <div class="col-lg-6">
-          <img src="images/shanghai-building.jpg" alt="Contact Image" class="contact-image shadow">
+      <h2>HERE'S WHAT AWAITS YOU</h2>
+
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-lg-6 col-md-6">
+          <div class="cube-card">
+            <div class="cube-inner">
+              <div class="cube-front">
+                <img src="images/efour.jpg" alt="Exhibitors">
+                <h5>EXPANDED EXHIBITOR PARTICIPATION</h5>
+                <p>Over 200 exhibitors will showcase a diverse range of products and services, offering attendees a comprehensive view of the latest industry innovations.</p>
+              </div>
+              <div class="cube-back">
+                <h5>EXPANDED EXHIBITOR</h5>
+                <p>Discover innovation and technology shaping the future of industries with 200+ exhibitors.</p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Right Side Form -->
-        <div class="col-lg-6">
-          <form class="p-4 bg-white shadow rounded" id="fire-form">
-              <div class="mb-3">
-        <label for="fire-name" class="form-label">Your Name</label>
-        <input type="text" class="form-control" id="fire-name" placeholder="Enter your name" required>
-      </div>
-      <div class="mb-3">
-        <label for="fire-mobile" class="form-label">Mobile Number</label>
-        <input type="text" class="form-control" id="fire-mobile" placeholder="Enter your mobile number" required>
-      </div>
-      <div class="mb-3">
-        <label for="fire-email" class="form-label">Your Email</label>
-        <input type="email" class="form-control" id="fire-email" placeholder="Enter your email" required>
-      </div>
-      <div class="mb-3">
-        <label for="fire-message" class="form-label">Your Message</label>
-        <textarea class="form-control" id="fire-message" rows="5" placeholder="Write your message..." required></textarea>
-      </div>
-      <button type="submit" class="btn btn-custom w-100">Send Message</button>
-          </form>
+        <!-- Card 2 -->
+        <div class="col-lg-6 col-md-6">
+          <div class="cube-card">
+            <div class="cube-inner">
+              <div class="cube-front">
+                <img src="images/ethree.jpg" alt="Sustainable Construction">
+                <h5>FOCUS ON SUSTAINABLE CONSTRUCTION</h5>
+                <p>Emphasis on eco-friendly materials and energy-efficient designs, aligning with global trends to promote sustainable building practices.</p>
+              </div>
+              <div class="cube-back">
+                <h5>SUSTAINABLE FUTURE</h5>
+                <p>Join discussions on green materials and sustainability to build a better tomorrow.</p>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!-- Card 3 -->
+        <div class="col-lg-6 col-md-6">
+          <div class="cube-card">
+            <div class="cube-inner">
+              <div class="cube-front">
+                <img src="images/esix.jpg" alt="Advanced Machinery">
+                <h5>LIVE DEMONSTRATIONS OF ADVANCED MACHINERY</h5>
+                <p>Experience live demonstrations of cutting-edge machines offering insights into technological advancements.</p>
+              </div>
+              <div class="cube-back">
+                <h5>ADVANCED TECHNOLOGY</h5>
+                <p>Witness real-time machinery defining the next era of industrial innovation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-lg-6 col-md-6">
+          <div class="cube-card">
+            <div class="cube-inner">
+              <div class="cube-front">
+                <img src="images/eeight.jpg" alt="Conference">
+                <h5>COMPREHENSIVE EDUCATIONAL CONFERENCE & INTERACTION</h5>
+                <p>Over 60 expert presentations offering valuable insights from top professionals across industries.</p>
+              </div>
+              <div class="cube-back">
+                <h5>KNOWLEDGE HUB</h5>
+                <p>Engage with experts and gain deep understanding through interactive sessions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="marquee-section">
+    <div class="container-fluid">
+      <div class="marquee-track">
+
+        <div class="marquee-inner">
+          <span class="marquee-item">Talent Acquisition Employee Engagement Employee Engagement Employee Engagement Employee Engagement</span>
+         
+        </div>
+
+        <!-- Duplicate for infinite loop -->
 
       </div>
     </div>
   </section>
 
-  <div class="container my-5">
-  <div class="row g-4"><!-- g-4 adds gap between cols -->
+
+
+
+
+    <!-- About Section -->
+  <section class="about-section">
+    <div class="container">
+      <div class="row align-items-center about-content g-4">
+        
+        <!-- Left Image -->
+        <div class="col-lg-6 fade-left">
+          <div class="about-img">
+            <img src="images/glassclad-skyscrapers-central-mumbai-reflecting-sunset-hues-blue-hour.jpg" alt="About Us">
+          </div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="col-lg-6 fade-right">
+          <div class="about-text">
+            <h2>About Our Journey</h2>
+            <p>
+              Build Tec Expo 2026 is a leading trade exhibition dedicated to the building, construction, and interior design industries, connecting top manufacturers, suppliers, and professionals from across India. Organized by Konnekt Globe, the expo serves as a dynamic platform to showcase innovations, exchange ideas, and explore new business opportunities in the ever-evolving construction sector.
+            </p>
+
+            <p><strong>Key Highlights:</strong></p>
+            <ul>
+              <li>Brings together leading brands, architects, builders, and industry experts under one roof.</li>
+              <li>Showcases the latest in construction materials, machinery, tools, and interior solutions.</li>
+              <li>Offers unmatched networking and collaboration opportunities for exhibitors and visitors.</li>
+              <li>Features live product demos, launches, and interactive industry sessions.</li>
+              <li>Promotes sustainable and smart technologies driving the future of construction.</li>
+            </ul>
+
+            <a href="about.html" class="btn-custom">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <h2 style="text-align: center;margin-top: 2rem;margin-bottom: 2rem;font-weight: 700;">Meet Our Exhibitors</h2>
+  <section class="category-grid">
+
     
-    <div class="col-lg-4 col-md-6 text-center">
-      <div class="p-4 border h-100">
-        <h4 class="headcont">ADDRESS</h4>
-        <p class="mt-4" style="font-size: 18px;"><i class="bi bi-geo-alt-fill " style="color: #FFD700;" ></i>
-          #372/1, 3rd Floor, 4th Stage, 8th Main Road,<br>
-              Basaveshwaranagar,<br>
-              Bangalore, Karnataka, India - 560079
-        </p>
+    
+    <div class="category-card" style="background-image: url('images/eone.jpeg');">
+      <div class="category-info">
+        <h3>Building & Construction Materials</h3>
+        <p>Cement, blocks, steel, and essential raw materials for modern construction excellence.</p>
       </div>
     </div>
 
-    <div class="col-lg-4 col-md-6 text-center">
-  <div class="p-4 border h-100">
-    <h4 class="headcont">PHONE NUMBER</h4>
-    <div class="row mt-4">
-      <div class="col-6">
-        <p class="cons"><i class="bi bi-phone-fill " style="color: #FFD700;"></i> +91 7406213220</p>
+    <div class="category-card" style="background-image: url('images/etwo.jpg');">
+      <div class="category-info">
+        <h3>Machinery & Equipment</h3>
+        <p>Cranes, mixers, scaffolding, and cutting-edge machinery powering infrastructure growth.</p>
       </div>
-      <div class="col-6">
-        <p class="cons" ><i class="bi bi-phone-fill " style="color: #FFD700;"></i>  +91 7406213221</p>
+    </div>
+
+    <div class="category-card" style="background-image: url('images/ethree.jpg');">
+      <div class="category-info">
+        <h3>Interiors & Furniture</h3>
+        <p>Modular kitchens, finishes, and décor solutions defining next-gen living spaces.</p>
       </div>
-      <div class="col-6">
-        <p class="cons" ><i class="bi bi-phone-fill " style="color: #FFD700;"></i>  +91 7406213222</p>
+    </div>
+
+    <div class="category-card" style="background-image: url('images/efour.jpg');">
+      <div class="category-info">
+        <h3>Doors, Windows & Glass Systems</h3>
+        <p>Innovative designs for energy efficiency, safety, and modern architectural style.</p>
       </div>
-      <div class="col-6">
-        <p class="cons" ><i class="bi bi-phone-fill " style="color: #FFD700;"></i>  +91 7406213223</p>
+    </div>
+
+    <div class="category-card" style="background-image: url('images/efive.jpeg');">
+      <div class="category-info">
+        <h3>Plumbing, Electrical & Wiring Solutions</h3>
+        <p>Reliable systems ensuring seamless integration of functionality and safety.</p>
+      </div>
+    </div>
+
+    <div class="category-card" style="background-image: url('images/esix.jpg');">
+      <div class="category-info">
+        <h3>Roofing, Cladding, Waterproofing & Facades</h3>
+        <p>Durable materials engineered for performance, protection, and aesthetics.</p>
+      </div>
+    </div>
+
+    <div class="category-card" style="background-image: url('images/eseven.webp');">
+      <div class="category-info">
+        <h3>Smart Home & Automation Technologies</h3>
+        <p>IoT-driven systems delivering intelligent, efficient, and secure living environments.</p>
+      </div>
+    </div>
+
+    <div class="category-card" style="background-image: url('images/eeight.jpg');">
+      <div class="category-info">
+        <h3>Flooring, Tiles, Marbles & Granite</h3>
+        <p>Elegant finishes offering durability and timeless beauty to any space.</p>
+      </div>
+    </div>
+
+    <div class="category-card" style="background-image: url('images/enine.jpg');">
+      <div class="category-info">
+        <h3>Solar Energy, Power Systems & HVAC</h3>
+        <p>Renewable energy, advanced cooling, and efficient climate control solutions.</p>
+      </div>
+    </div>
+
+    <!-- ✅ New Card Added -->
+    <div class="category-card" style="background-image: url('images/eten.webp');">
+      <div class="category-info">
+        <h3>Safety Gear & Construction Tools</h3>
+        <p>Helmets, gloves, tools, and protective gear ensuring safety and precision on-site.</p>
+      </div>
+    </div>
+
+  </section>
+
+  
+
+  <section class="why-visit-section">
+    <div class="container why-visit-content">
+      <h2 class="section-title">Why Visit Build Tec Expo?</h2>
+      <p class="section-subtitle">
+        Step into the future of construction and innovation at <strong>Build Tec Expo 2026</strong> — 
+        the ultimate destination for builders, architects, interior designers, and industry professionals. 
+        Discover new technologies, connect with leading brands, and experience the transformation shaping tomorrow’s infrastructure.
+      </p>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-card" style="animation-delay: 0.1s;">
+            <i class="bi bi-cpu"></i>
+            <h5>Explore Next-Gen Technologies</h5>
+            <p>Witness the latest innovations in construction materials, machinery, and smart-building solutions transforming modern infrastructure.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-card" style="animation-delay: 0.2s;">
+            <i class="bi bi-people"></i>
+            <h5>Connect & Collaborate</h5>
+            <p>Build meaningful business relationships with top suppliers, manufacturers, and professionals across the global construction ecosystem.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-card" style="animation-delay: 0.3s;">
+            <i class="bi bi-grid-3x3-gap"></i>
+            <h5>Discover Endless Products</h5>
+            <p>Explore thousands of products, materials, and equipment from diverse segments of the building and construction industry.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-card" style="animation-delay: 0.4s;">
+            <i class="bi bi-person-video3"></i>
+            <h5>Meet Industry Experts</h5>
+            <p>Engage with leading architects, engineers, and industry experts who are driving India’s construction revolution.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-card" style="animation-delay: 0.5s;">
+            <i class="bi bi-lightning-charge"></i>
+            <h5>Experience Live Demonstrations</h5>
+            <p>Watch real-time product launches, machinery demos, and live sessions showcasing innovation in action.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="feature-card" style="animation-delay: 0.6s;">
+            <i class="bi bi-bar-chart-line"></i>
+            <h5>Grow Your Business Reach</h5>
+            <p>Expand your brand’s visibility, explore new partnerships, and tap into emerging markets across India’s booming construction sector.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="showcase-section">
+    <div class="container">
+      <!-- Header -->
+      <div class="showcase-header">
+        <h2>The Ultimate Build Technology Showcase</h2>
+        <p>
+          This isn’t just an expo — it’s where innovation meets construction excellence.
+          Experience the future of building technology, sustainable design, and architectural brilliance — all under one roof.
+        </p>
+      </div>
+
+      <!-- Build Smarter -->
+      <div class="build-block">
+        <div class="build-text">
+          <h3>Build Smarter</h3>
+          <p>A leading platform where construction pioneers and innovators redefine the built environment through technology and design excellence.</p>
+          <a href="#"><i class="bi bi-building"></i> Exhibit Now</a>
+        </div>
+        <div class="build-icon">
+          <img src="images/ione.webp" alt="Build Smarter">
+        </div>
+      </div>
+
+      <!-- Build Greener -->
+      <div class="build-block">
+        <div class="build-text">
+          <h3>Build Greener</h3>
+          <p>Explore eco-friendly materials, smart energy systems, and sustainable design solutions shaping the cities of tomorrow.</p>
+          <a href="#"><i class="bi bi-leaf"></i> Discover Now</a>
+        </div>
+        <div class="build-icon">
+          <img src="images/itwo.jpg" alt="Build Greener">
+        </div>
+      </div>
+
+      <!-- Build Beyond -->
+      <div class="build-block">
+        <div class="build-text">
+          <h3>Build Beyond</h3>
+          <p>Uncover next-gen construction tools, automation, and digital solutions revolutionizing the future of infrastructure and development.</p>
+          <a href="#"><i class="bi bi-gear"></i> Connect Now</a>
+        </div>
+        <div class="build-icon">
+          <img src="images/ithree.jpg" alt="Build Beyond">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="countdown-section" >
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        
+        <!-- Left: Logo + Text -->
+        <div class="col-lg-3 col-md-4 text-lg-start text-center mb-4 mb-lg-0 countdown-left">
+          <img src="images/mainlogo.png" loading="lazy" style="background-color: white;width: 300px;height: 110px;" alt="Government of India Logo">
+          
+        </div>
+
+        <!-- Center: Countdown -->
+        <div class="col-lg-5 col-md-6 text-center">
+          <div class="countdown-timer" id="timer">
+            <span id="days">00</span> : 
+            <span id="hours">00</span> : 
+            <span id="minutes">00</span> : 
+            <span id="seconds">00</span>
+          </div>
+          <div class="countdown-labels">
+            <span>Days</span>
+            <span>Hours</span>
+            <span>Minutes</span>
+            <span>Seconds</span>
+          </div>
+        </div>
+
+        <!-- Right: Button -->
+        <div class="col-lg-3 col-md-12 text-lg-end text-center mt-4 mt-lg-0">
+          <a href="exhibitors.html" class="btn countdown-btn">
+            Book your stand now
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="py-5" style="background:#fdfbe9;">
+  <div class="container">
+    <h2 class="text-center mb-4" style="font-weight:700;color:#257a1d;">
+      Google Reviews – Agri & Poultry Expo 
+    </h2>
+
+    <div class="row g-4">
+      
+      <!-- Review 1 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="review-card">
+          <div class="d-flex align-items-center mb-2">
+            <img src="images/faceone.avif" class="reviewer-img me-3">
+            <div>
+              <p class="mb-0 review-title">Ramesh Kumar</p>
+              <small>Visitor</small>
+            </div>
+          </div>
+          <div class="review-stars mb-2">
+            ⭐⭐⭐⭐⭐
+          </div>
+          <p>Amazing expo! Learned a lot about latest farming technology and poultry innovations. Very useful for farmers.</p>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="review-card">
+          <div class="d-flex align-items-center mb-2">
+            <img src="images/facethree.avif" class="reviewer-img me-3">
+            <div>
+              <p class="mb-0 review-title">Priya Agriculture</p>
+              <small>Exhibitor</small>
+            </div>
+          </div>
+          <div class="review-stars mb-2">
+            ⭐⭐⭐⭐⭐
+          </div>
+          <p>Great response from farmers & industry buyers. Well-organized event with good footfall!</p>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="review-card">
+          <div class="d-flex align-items-center mb-2">
+            <img src="images/facetwo.jpeg" class="reviewer-img me-3">
+            <div>
+              <p class="mb-0 review-title">Mohammed Farhan</p>
+              <small>Poultry Supplier</small>
+            </div>
+          </div>
+          <div class="review-stars mb-2">
+            ⭐⭐⭐⭐⭐
+          </div>
+          <p>Excellent networking opportunity. Found genuine leads from poultry industry. Recommended!</p>
+        </div>
+      </div>
+
+      <!-- Review 4 -->
+      <div class="col-lg-3 col-md-6">
+        <div class="review-card">
+          <div class="d-flex align-items-center mb-2">
+            <img src="images/facefour.jpg" class="reviewer-img me-3">
+            <div>
+              <p class="mb-0 review-title">Sowmya Devi</p>
+              <small>Farmer</small>
+            </div>
+          </div>
+          <div class="review-stars mb-2">
+            ⭐⭐⭐⭐⭐
+          </div>
+          <p>Very informative event! Got insights into organic farming, seeds & poultry feed solutions.</p>
+        </div>
       </div>
       
     </div>
   </div>
-</div>
+</section>
+  
 
-
-    <div class="col-lg-4 col-md-6 ">
-      <div class="p-4 border h-100">
-        <h4 class="headcont text-center" >EMAIL</h4>
-        <p class="mt-4" style="font-size: 18px;;"><i class="bi bi-envelope-fill " style="color: #FFD700;"></i> buildtecexpo@gmail.com</p>
-        <p class="mt-4" style="font-size: 18px;;"><i class="bi bi-envelope-fill " style="color: #FFD700;"></i> info@buildtecexpo.com</p>
-        
-      </div>
+  <div class="container my-5">
+  <div class="row contact-section">
+    <!-- Left Image -->
+    <div class="col-md-6 p-0">
+      <img src="images/vone.jpg" loading="lazy" alt="Contact Us" class="contact-img h-100">
     </div>
 
-  </div>
-</div>
+    <!-- Right Form -->
+    <div class="col-md-6 contact-form">
+      <h3 class="fw-bold text-white mb-3">Send Us a Message</h3>
+      <p class="text-white">Have a project in mind or need expert advice? Fill out the form below and we’ll get back to you within 24 hours.</p>
 
-  <div class="container-fluid  map">
-    <iframe class="map-container" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.159377419405!2d55.38709797483961!3d25.26522352894306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5dcdb083965b%3A0xbd82345723fed653!2sEmirates%20Post%20-%20Al%20Qusais%20Post%20Office!5e0!3m2!1sen!2sin!4v1758793117107!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       <form id="contactForm">
+      <div class="mb-3">
+        <label class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="fullName" placeholder="Full Name" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="email" placeholder="Email" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Phone Number</label>
+        <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Message</label>
+        <textarea class="form-control" id="message" rows="4" placeholder="Message" required></textarea>
+      </div>
+
+      <button type="submit" class="btn submit-btn " style="background-color: white; color: #218838;">Submit</button>
+      <div class="privacy-note text-center text-white">We respect your privacy. Your information is safe with us and will never be shared.</div>
+    </form>
+    </div>
+  </div>
 </div>
 
 
@@ -321,6 +736,32 @@
   </div>
 </div>
 
+ <script>
+    // Set target date
+    const targetDate = new Date("March 06, 2026 09:00:00").getTime();
+
+    const timer = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+      document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+      document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+      document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+
+      // Stop countdown
+      if (distance < 0) {
+        clearInterval(timer);
+        document.getElementById("timer").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
+
 <script>
   const chatbotBtn = document.getElementById("chatbotBtn");
   const chatWindow = document.getElementById("chatWindow");
@@ -388,7 +829,74 @@
   });
 </script>
 
+<script>
+    // Fade-in animation on scroll
+    const cards = document.querySelectorAll('.cube-card');
+    const revealCards = () => {
+      const triggerBottom = window.innerHeight * 0.8;
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect().top;
+        if (rect < triggerBottom) {
+          card.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealCards);
+    revealCards();
+
+    // Auto flip animation
+    let currentIndex = 0;
+    setInterval(() => {
+      const innerCards = document.querySelectorAll('.cube-inner');
+      innerCards.forEach((card, i) => {
+        if (i === currentIndex) {
+          card.style.transform = 'rotateY(180deg)';
+        } else {
+          card.style.transform = 'rotateY(0deg)';
+        }
+      });
+      currentIndex = (currentIndex + 1) % innerCards.length;
+    }, 4000); // Flip every 4 seconds
+  </script>
+   <script>
+    // Scroll-trigger animation
+    const blocks = document.querySelectorAll('.build-block');
+    const revealBlocks = () => {
+      const trigger = window.innerHeight * 0.85;
+      blocks.forEach(block => {
+        const top = block.getBoundingClientRect().top;
+        if (top < trigger) {
+          block.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealBlocks);
+    revealBlocks();
+  </script>
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+<button class="fire-scroll-top" id="fireScrollTop">
+    <i class="bi bi-arrow-up-short"></i>
+  </button>
+  <a href="https://wa.me/917406213220" class="whatsapp-float" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+<script>
+     window.addEventListener("load", () => {
+      const preloader = document.getElementById("firePreloader");
+      preloader.classList.add("fire-hidden");
+    });
+    const scrollBtn = document.getElementById("fireScrollTop");
+
+    window.addEventListener("scroll", () => {
+      scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
 </body>
 </html>
