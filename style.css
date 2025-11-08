@@ -2933,3 +2933,114 @@
         font-size: 2rem;
       }
     }
+    .why-exhibit {
+      padding: 100px 0;
+      background: linear-gradient(135deg, #000000 0%, #ffd700 100%);
+    }
+
+    .why-exhibit h2 {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2.5rem;
+      color: #FFD700;
+      margin-bottom: 1rem;
+    }
+
+    .why-exhibit p.sub-text {
+      text-align: center;
+      max-width: 850px;
+      margin: 0 auto 60px;
+      color: white;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    /* --- Flip Card Container --- */
+    .flip-card {
+      background: transparent;
+      width: 100%;
+      height: 320px;
+      perspective: 1000px;
+    }
+
+    /* Inner container (handles the flip) */
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    /* Front and Back Faces */
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 25px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+    /* Front Side */
+    .flip-card-front {
+      background: #fff;
+      color: #000;
+    }
+
+    .flip-card-front i {
+      font-size: 2.8rem;
+      color: #FFD700;
+      margin-bottom: 15px;
+    }
+
+    .flip-card-front h5 {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #000;
+    }
+
+    /* Back Side */
+    .flip-card-back {
+      background: linear-gradient(180deg, #FFD700 0%, #ffec7a 100%);
+      color: #000;
+      transform: rotateY(180deg);
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+    }
+
+    .flip-card-back p {
+      font-size: 1rem;
+      line-height: 1.6;
+      font-weight: 500;
+      padding: 0 10px;
+    }
+
+    /* Hover Lift Effect */
+    .flip-card:hover {
+      transform: translateY(-8px);
+      transition: 0.4s ease;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+      .flip-card {
+        height: 280px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .flip-card {
+        margin-bottom: 20px;
+      }
+    }
