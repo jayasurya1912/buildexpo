@@ -128,7 +128,7 @@
 }
 .contact-img {
   width: 100%;
-  height: 100%;
+  height: 300px;
   object-fit: cover;
 }
 .form-control {
@@ -257,10 +257,8 @@
         margin-bottom: 30px;
       }
     }
-    .dropdown-menu
-    {
-       
-    }
+     
+    
     .footer-section {
   position: relative;
   overflow: hidden;
@@ -361,7 +359,7 @@
     .btn-custom {
       background-color: black;
       border: none;
-      color: #fff;
+      color: black;
       padding: 12px 25px;
       font-weight: 600;
       transition: 0.3s;
@@ -388,7 +386,7 @@
 
 /* Overlay with balanced transparency (removed top gap) */
 .footer-overlay {
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.65);
   padding: 50px 0 25px; /* reduced top padding from 60px */
   backdrop-filter: brightness(1.05);
   position: relative;
@@ -410,7 +408,7 @@
 }
 
 .footer-links a {
-  color: #e8e8e8;
+  color: white;
   text-decoration: none;
   transition: all 0.3s ease;
 }
@@ -423,7 +421,7 @@
 /* Contact Info */
 .footer-contact li {
   margin-bottom: 10px;
-  color: #ccc;
+  color: white;
   font-size: 15px;
 }
 
@@ -1895,7 +1893,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.45);
+      background: rgba(0, 0, 0, 0.55);
       transition: background 0.4s ease;
     }
 
@@ -1960,18 +1958,20 @@
 
     .why-visit-section {
       position: relative;
-      background-color: #000;
       padding: 100px 0;
       overflow: hidden;
+      color: #000;
     }
 
-    /* Overlay for better contrast */
+    /* Background image with blur overlay */
     .why-visit-section::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.7);
-      z-index: 1;
+      background: url("images/fdback.jpg") center/cover no-repeat;
+      
+      transform: scale(1.05);
+      z-index: 0;
     }
 
     .why-visit-content {
@@ -1981,16 +1981,16 @@
 
     .section-title {
       text-align: center;
-      font-size: 2.3rem;
+      font-size: 2.4rem;
       font-weight: 700;
-      color: #FFD700;
+      color: black;
       margin-bottom: 25px;
       letter-spacing: 1px;
     }
 
     .section-subtitle {
       text-align: center;
-      color: #ddd;
+      color: black ;
       font-size: 1.1rem;
       max-width: 850px;
       margin: 0 auto 60px auto;
@@ -1999,54 +1999,88 @@
 
     /* Feature Cards */
     .feature-card {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+      background: linear-gradient(180deg, #FFD700 0%, #ffea85 100%);
+      border: 2px solid rgba(255, 215, 0, 0.3);
       border-radius: 15px;
-      padding: 25px 20px;
-      text-align: left;
+      padding: 30px 25px;
       color: #fff;
       height: 100%;
-      transition: all 0.4s ease;
-      backdrop-filter: blur(4px);
-      animation: fadeUp 1.2s ease both;
-      border: 2px solid white;
+      transition: all 0.6s ease;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      cursor: pointer;
+      z-index: 1;
     }
 
+    /* Gold Fill from Bottom to Top */
+    .feature-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 0%;
+      background: linear-gradient(180deg, #FFD700 0%, #ffea85 100%);
+      z-index: 0;
+      transition: height 0.6s ease-in-out;
+    }
+
+    .feature-card:hover::before {
+      height: 100%;
+    }
+
+    /* Content always above overlay */
+    .feature-card * {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Hover animations */
     .feature-card:hover {
       transform: translateY(-10px);
-      background: rgba(255, 255, 255, 0.15);
-      box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
+      border-color: #FFD700;
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
     }
 
     .feature-card i {
-      font-size: 2rem;
-      color: #FFD700;
+      font-size: 2.2rem;
+      color: black;
       margin-bottom: 15px;
+      transition: color 0.3s ease;
+    }
+
+    .feature-card:hover i {
+      color: #000;
     }
 
     .feature-card h5 {
       color: #FFD700;
       font-weight: 700;
       margin-bottom: 10px;
+      transition: color 0.3s ease;
+    }
+
+    .feature-card:hover h5 {
+      color: #000;
     }
 
     .feature-card p {
-      color: #eee;
+      color: #f1f1f1;
       font-size: 0.95rem;
       line-height: 1.6;
       margin: 0;
+      transition: color 0.4s ease;
     }
 
-    /* Animations */
+    .feature-card:hover p {
+      color: #000;
+    }
+
+    /* Fade-up entrance */
     @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     /* Responsive Adjustments */
@@ -2067,6 +2101,115 @@
         text-align: center;
       }
     }
+
+.why-visit-content {
+  position: relative;
+  z-index: 2;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: white;
+  font-size: 1.1rem;
+  max-width: 850px;
+  margin: 0 auto 60px auto;
+  line-height: 1.7;
+}
+
+/* Feature Cards */
+
+.feature-card:hover::before {
+  height: 100%;
+}
+
+/* Bring content above overlay */
+.feature-card * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hover State Effects */
+.feature-card:hover {
+  border-color: #FFD700;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+  transform: translateY(-10px);
+}
+
+/* Text & Icon Colors */
+.feature-card i {
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 15px;
+  transition: color 0.4s ease;
+}
+
+.feature-card:hover i {
+  color: #000;
+}
+
+.feature-card h5 {
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 10px;
+  transition: color 0.4s ease;
+}
+
+.feature-card:hover h5 {
+  color: #000;
+}
+
+.feature-card p {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  transition: color 0.4s ease;
+}
+
+.feature-card:hover p {
+  color: #000;
+}
+
+/* Animation for fade-up on load */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  .section-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-visit-section {
+    padding: 70px 0;
+  }
+  .feature-card {
+    text-align: center;
+  }
+}
+
 .showcase-section {
       position: relative;
       padding: 100px 0 50px;
@@ -2252,7 +2395,7 @@
 
     .contact-img {
       width: 100%;
-      height: 100%;
+      height: 750px;
       object-fit: cover;
     }
 
@@ -2531,93 +2674,124 @@
       }
     }
   .mission-vision-section {
-      position: relative;
-      padding: 100px 0;
-      background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
-      overflow: hidden;
-    }
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+  background: url("images/fdback.jpg") center/cover no-repeat;
 
-    /* Decorative glowing lines */
-    .mission-vision-section::before,
-    .mission-vision-section::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: repeating-linear-gradient(
-        45deg,
-        rgba(255, 215, 0, 0.06),
-        rgba(255, 215, 0, 0.06) 2px,
-        transparent 2px,
-        transparent 8px
-      );
-      z-index: 1;
-      animation: move-bg 20s linear infinite;
-    }
+}
 
-    @keyframes move-bg {
-      from {background-position: 0 0;}
-      to {background-position: 100% 100%;}
-    }
+/* Decorative glowing lines background */
 
-    .mission-vision-section h2 {
-      text-align: center;
-      font-weight: 700;
-      font-size: 2.5rem;
-      color: #FFD700;
-      margin-bottom: 3rem;
-      position: relative;
-      z-index: 2;
-    }
+@keyframes move-bg {
+  from {background-position: 0 0;}
+  to {background-position: 100% 100%;}
+}
 
-    /* Card Style */
-    .mv-card {
-      position: relative;
-      background: rgba(255, 215, 0, 0.1);
-      border: 1px solid rgba(255, 215, 0, 0.3);
-      border-radius: 20px;
-      padding: 2.5rem 2rem;
-      text-align: center;
-      transition: all 0.4s ease;
-      box-shadow: 0 0 25px rgba(255, 215, 0, 0.1);
-      backdrop-filter: blur(5px);
-      z-index: 3;
-      animation: fadeUp 1.3s ease both;
-    }
+.mission-vision-section h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #FFD700;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
+}
 
-    .mv-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
-      background: rgba(255, 215, 0, 0.15);
-    }
+/* Mission & Vision Card */
+.mv-card {
+  position: relative;
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.1);
+  backdrop-filter: blur(5px);
+  z-index: 3;
+  overflow: hidden;
+}
 
-    .mv-icon {
-      width: 90px;
-      height: 90px;
-      background: #FFD700;
-      color: #000;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      margin: 0 auto 1.2rem;
-      box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
-      animation: pulse 3s infinite ease-in-out;
-    }
+/* Gold fill overlay (hidden initially) */
+.mv-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(180deg, #FFD700 0%, #ffec85 100%);
+  transition: height 0.6s ease-in-out;
+  z-index: 1;
+  border-radius: 20px;
+}
 
-    .mv-card h4 {
-      color: #FFD700;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      letter-spacing: 1px;
-    }
+/* Fill animation on hover */
+.mv-card:hover::before {
+  height: 100%;
+}
 
-    .mv-card p {
-      color: #fff;
-      font-size: 1.05rem;
-      line-height: 1.7;
-    }
+/* Bring text & icons above overlay */
+.mv-card * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hover effect adjustments */
+.mv-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+  border-color: #FFD700;
+}
+
+/* Icon styling */
+.mv-icon {
+  width: 90px;
+  height: 90px;
+  background: #FFD700;
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 1.2rem;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+  animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+}
+
+.mv-card h4 {
+  color: #FFD700;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  transition: color 0.4s ease;
+}
+
+.mv-card p {
+  color: #000;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  transition: color 0.4s ease;
+}
+
+/* Text turns black on hover */
+.mv-card:hover h4,
+.mv-card:hover p {
+  color: #000;
+}
+
+/* Entrance animation */
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(40px);}
+  to {opacity: 1; transform: translateY(0);}
+}
 
     /* Line Connector */
     .connector {
@@ -2655,12 +2829,13 @@
     }
      .faq-section {
       padding: 100px 0;
-      background: linear-gradient(180deg, #000 0%, #111 100%);
+      background: url("images/back.avif") center/cover no-repeat;
+
       position: relative;
     }
 
     .faq-title {
-      color: #FFD700;
+      color: black;
       font-weight: 700;
       text-align: center;
       margin-bottom: 60px;
@@ -2677,6 +2852,8 @@
       margin-bottom: 15px;
       transition: all 0.3s ease;
       overflow: hidden;
+      
+      
     }
 
     .accordion-item:hover {
@@ -2684,8 +2861,8 @@
     }
 
     .accordion-button {
-      background: transparent;
-      color: #FFD700;
+      background: #ffd700;
+      color: black;
       font-weight: 600;
       padding: 18px;
       font-size: 1.1rem;
@@ -2727,7 +2904,7 @@
       content: '+';
       font-size: 1.8rem;
       font-weight: 700;
-      color: #FFD700;
+      color: black;
       position: absolute;
       right: 25px;
       top: 50%;
