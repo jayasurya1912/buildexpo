@@ -80,7 +80,7 @@
 </li>
 
 
-          <a class="nav-link right-gap" style="background-color: black;color: white;" href="gallery.html">
+          <a class="nav-link right-gap"  href="gallery.html">
     GALLERY
   </a>
 </li>
@@ -228,7 +228,76 @@
     </div>
   </section>
 
-<footer class="footer-section text-white ">
+  <div class="container">
+    <div class="form-section">
+      <h3 class="form-title" style="color: white;">Exhibitor Registration Form</h3>
+      <form id="contactForm">
+  <div class="row mb-3 mt-5">
+    <div class="col-md-6">
+      <label for="companyName" class="form-label">Company Name</label>
+      <input type="text" class="form-control" id="companyName" placeholder="Enter your company name">
+    </div>
+    <div class="col-md-6">
+      <label for="contactPerson" class="form-label">Contact Person Name</label>
+      <input type="text" class="form-control" id="contactPerson" placeholder="Full name">
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="designation" class="form-label">Designation</label>
+      <input type="text" class="form-control" id="designation" placeholder="Designation">
+    </div>
+    <div class="col-md-6">
+      <label for="mobileNumber" class="form-label">Mobile Number</label>
+      <input type="tel" class="form-control" id="mobileNumber" placeholder="Mobile number">
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="address" class="form-label">Address</label>
+    <textarea class="form-control" id="address" rows="2" placeholder="Full address"></textarea>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="email" class="form-label">Email ID</label>
+      <input type="email" class="form-control" id="email" placeholder="example@email.com">
+    </div>
+    <div class="col-md-6">
+      <label for="website" class="form-label">Website</label>
+      <input type="url" class="form-control" id="website" placeholder="https://yourcompany.com">
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="products" class="form-label">Products / Services of Your Company</label>
+    <textarea class="form-control" id="products" rows="3" placeholder="List your products/services"></textarea>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="spaceType" class="form-label">Bare Space / Shell Space</label>
+      <select class="form-select form-control" id="spaceType">
+        <option selected disabled>Choose...</option>
+        <option value="Bare">Bare Space</option>
+        <option value="Shell">Shell Space</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <label for="stallArea" class="form-label">Preferred Stall Area (in Sq. Mtr.)</label>
+      <input type="number" class="form-control" id="stallArea" placeholder="e.g., 9, 12, 18">
+    </div>
+  </div>
+
+  <div class="text-center">
+    <button type="submit" class="btn btn-dangerese px-5" style="background-color: #28a745;border: 2px solid white;color: white;">Submit</button>
+  </div>
+</form>
+    </div>
+  </div>
+
+<footer class="footer-section text-white mt-4">
   <div class="footer-overlay">
     <div class="container">
       <div class="row gy-4">

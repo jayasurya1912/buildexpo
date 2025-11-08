@@ -3129,3 +3129,119 @@
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
+.form-section {
+    
+      background: linear-gradient(90deg, #21833b, #1b6b2a);
+
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 60px;
+  }
+  .form-title {
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .btn-primary {
+    background-color:#7B5FFF;
+    border-color: #7B5FFF;
+    margin-top: 2rem;
+    padding: 10px;
+  }
+  .btn-primary:hover {
+    background-color: #5f1fa2;
+  }
+  .sub-head
+  {
+    font-size: 29px;
+  }
+   .form-container {
+    background: linear-gradient(90deg, #21833b, #1b6b2a);
+    padding: 80px;
+    border-radius: 10px;
+    margin-top: 40px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    color: white;
+    font-weight: 600;
+    
+  }
+  .form-titles {
+    color: #7B5FFF;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .expo-contact-area {
+      padding: 80px 0;
+      text-align: center;
+      background: linear-gradient(180deg, #f6fff8 0%, #ffffff 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .expo-contact-area::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      left: -80px;
+      width: 250px;
+      height: 250px;
+      background: rgba(40, 167, 69, 0.1);
+      border-radius: 50%;
+      animation: expo-float-bubble 6s ease-in-out infinite alternate;
+    }
+
+    /* ---------- TITLE ---------- */
+    .expo-contact-heading {
+      color: #8b4513;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .expo-contact-title {
+      font-weight: 700;
+      color: #1e1e1e;
+      margin-bottom: 50px;
+    }
+
+    /* ---------- CONTACT CARDS ---------- */
+    .expo-contact-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      padding: 40px 20px;
+      transition: all 0.4s ease;
+      height: 100%;
+      position: relative;
+      z-index: 2;
+      animation: expo-fade-in 1s ease forwards;
+    }
+
+    .expo-contact-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(40, 167, 69, 0.25);
+    }
+
+    .expo-contact-icon {
+      font-size: 42px;
+      color: #28a745;
+      margin-bottom: 18px;
+      animation: expo-bounce 2.5s infinite;
+    }
+
+    .expo-contact-card h5 {
+      font-weight: 600;
+      color: #1e1e1e;
+      margin-bottom: 15px;
+    }
+
+    .expo-contact-card p {
+      font-size: 15px;
+      color: #333;
+      margin: 0;
+      line-height: 1.7;
+    }
