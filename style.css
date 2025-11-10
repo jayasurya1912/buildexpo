@@ -458,7 +458,7 @@ html, body {
 /* Responsive */
 @media (max-width: 992px) {
   .footer-section {
-    text-align: center;
+    text-align: start;
   }
   .footer-links a {
     padding-left: 0;
