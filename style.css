@@ -1711,7 +1711,7 @@
     /* Responsive */
     @media (max-width: 992px) {
       .cube-card {
-        height: 300px;
+        height: 350px;
       }
       .cube-front img {
         height: 130px;
@@ -3145,7 +3145,7 @@
     }
 .form-section {
     
-      background: linear-gradient(90deg, #21833b, #1b6b2a);
+      background: linear-gradient(90deg, #ffd700, black);
 
     padding: 40px 30px;
     border-radius: 20px;
