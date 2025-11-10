@@ -3,6 +3,10 @@
   width: 8px;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 ::-webkit-scrollbar-track {
   background: #ffffff; /* white track */
   border-left: 2px solid #d3d3d3; /* light grey border like screenshot */
