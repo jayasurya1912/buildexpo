@@ -1476,9 +1476,10 @@
     height: 100vh;
   }
 }
+
 @media (max-width: 1350px) {
   .carousel img {
-    height: 80vh;
+    height: 95vh;
   }
 }
 
@@ -1802,6 +1803,8 @@
       font-size: 1rem;
       line-height: 1.7;
       margin-bottom: 20px;
+      text-align: justify;
+      hyphens: auto;
     }
 
     .about-text ul {
@@ -1809,6 +1812,7 @@
       list-style-type: none;
       padding-left: 0;
       margin-bottom: 25px;
+      text-align: justify;hyphens: auto;
     }
 
     .about-text ul li {
@@ -3005,6 +3009,7 @@
       justify-content: center;
       align-items: center;
       padding: 30px;
+      
     }
 
     /* Front Side */
@@ -3331,5 +3336,26 @@
       .cons
       {
         font-size: 12px;
+      }
+    }
+
+    .encount
+    {
+      width:260px;
+      height:120px;
+      object-fit:cover;
+      border-radius:10px;
+      margin-top: -35px;
+
+    }
+    @media(max-width:550px)
+    {
+      .encount
+      {
+        width:260px;
+        height:120px;
+        object-fit:cover;
+        border-radius:10px;
+        margin-top: -35px;
       }
     }
