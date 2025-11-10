@@ -466,7 +466,7 @@
         <div class="build-text">
           <h3>Build Smarter</h3>
           <p>A leading platform where construction pioneers and innovators redefine the built environment through technology and design excellence.</p>
-          <a href="#"><i class="bi bi-building"></i> Exhibit Now</a>
+          <a href="contact.html"><i class="bi bi-building"></i> Exhibit Now</a>
         </div>
         <div class="build-icon">
           <img src="images/ione.webp" alt="Build Smarter">
@@ -478,7 +478,7 @@
         <div class="build-text">
           <h3>Build Greener</h3>
           <p>Explore eco-friendly materials, smart energy systems, and sustainable design solutions shaping the cities of tomorrow.</p>
-          <a href="#"><i class="bi bi-leaf"></i> Discover Now</a>
+          <a href="contact.html"><i class="bi bi-phone"></i> Discover Now</a>
         </div>
         <div class="build-icon">
           <img src="images/itwo.jpg" alt="Build Greener">
@@ -490,7 +490,7 @@
         <div class="build-text">
           <h3>Build Beyond</h3>
           <p>Uncover next-gen construction tools, automation, and digital solutions revolutionizing the future of infrastructure and development.</p>
-          <a href="#"><i class="bi bi-gear"></i> Connect Now</a>
+          <a href="contact.html"><i class="bi bi-gear"></i> Connect Now</a>
         </div>
         <div class="build-icon">
           <img src="images/ithree.jpg" alt="Build Beyond">
@@ -617,7 +617,7 @@
         <textarea class="form-control" id="message" rows="4" placeholder="Message" required></textarea>
       </div>
 
-      <button type="submit" class="btn submit-btn " style="background-color: white; color: #218838;">Submit</button>
+      <button type="submit" class="btn submit-btn " style="background-color: white; color:black;">Submit</button>
       <div class="privacy-note text-center text-black">We respect your privacy. Your information is safe with us and will never be shared.</div>
     </form>
     </div>
@@ -666,7 +666,7 @@
             <li><i class="bi bi-geo-alt-fill"></i>  #372/1, 3rd Floor, 4th Stage, 8th Main Road,<br>
               Basaveshwaranagar,<br>
               Bangalore, Karnataka, India - 560079</li>
-            <li><i class="bi bi-envelope-fill"></i> info@buildtecexpoexpo.com</li>
+            <li><i class="bi bi-envelope-fill"></i> info@buildtecexpo.com</li>
             <li><i class="bi bi-telephone-fill"></i> +91 7406213220</li>
           </ul>
           <div class="imn">
@@ -690,6 +690,7 @@
     </div>
   </div>
 </footer>
+
 <div class="chatbot-btn" id="chatbotBtn">
   <div class="bot-head">
     <div class="bot-eye"></div>
@@ -713,7 +714,13 @@
     <input type="text" id="userInput" placeholder="Type your message..." />
     <button id="sendBtn"><i class="bi bi-send-fill"></i></button>
   </div>
+  <!-- Floating Phone Button -->
+
+
 </div>
+<a href="tel:+919876543210" class="phone-btn" title="Call Us">
+  <i class="bi bi-telephone-fill"></i>
+</a>
 
  <script>
     // Set target date
@@ -924,6 +931,35 @@
       if (event.target === popupOverlay) {
         popupOverlay.classList.remove("show");
       }
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    // ✅ Initialize EmailJS
+    emailjs.init("Js1PeDZgWTE7Ck-J3"); // 🔹 Replace with your EmailJS public key
+
+    // ✅ Form submission handler
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const templateParams = {
+        fullName: document.getElementById("fullName").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        message: document.getElementById("message").value,
+      };
+
+      console.log("Sending data:", templateParams); // Debug log
+
+      // ✅ Send via EmailJS
+      emailjs.send("service_vhvdwam", "template_b31t2hu", templateParams)
+        .then(function(response) {
+          alert("Thank you for contacting us. We will get back to you soon.");
+          document.getElementById("contactForm").reset();
+        }, function(error) {
+          alert("❌ Failed to send message: " + JSON.stringify(error));
+          console.error("EmailJS Error:", error);
+        });
     });
   </script>
 </body>
