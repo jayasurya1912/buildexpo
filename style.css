@@ -1488,7 +1488,7 @@ html, body {
 }
 @media (max-width: 1300px) {
   .carousel img {
-    height: 105vh;
+    height: 95vh;
   }
 }
 @media (max-width: 1190px) {
