@@ -1486,6 +1486,17 @@ html, body {
     height: 105vh;
   }
 }
+@media (max-width: 1300px) {
+  .carousel img {
+    height: 95vh;
+  }
+}
+@media (max-width: 1190px) {
+  .carousel img {
+    height: 80vh;
+  }
+}
+
 
 
 @media (max-width: 918px) {
