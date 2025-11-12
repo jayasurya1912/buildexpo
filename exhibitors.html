@@ -14,7 +14,47 @@
 </head>
 
 <body>
+  
+  <div id="preloader" role="status" aria-live="polite" aria-label="Loading content">
+    <div class="loader-card">
+      <div class="building" aria-hidden="true">
+        <div class="antenna"></div>
 
+        <!-- windows grid -->
+        <div class="windows" aria-hidden="true">
+          <!-- 15 windows (3 cols x 5 rows) -->
+          <div class="window"><div class="lit"></div></div>
+          <div class="window"><div class="lit"></div></div>
+          <div class="window"><div class="lit"></div></div>
+
+          <div class="window"><div class="lit"></div></div>
+          <div class="window"><div class="lit"></div></div>
+          <div class="window"><div class="lit"></div></div>
+
+          <div class="window"><div class="lit"></div></div>
+          <div class="window"><div class="lit"></div></div>
+          <div class="window"><div class="lit"></div></div>
+
+          <div class="window"><div class="lit"></div></div>
+          <div class="window"><div class="lit"></div></div>
+          <div class="window"><div class="lit"></div></div>
+
+          <div class="window"><div class="lit"></div></div>
+          <div class="window"><div class="lit"></div></div>
+          <div class="window"><div class="lit"></div></div>
+        </div>
+
+        <div class="glint" aria-hidden="true"></div>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="fast-spinner" aria-hidden="true"></div>
+        <div class="progress-value" id="progressValue">0%</div>
+      </div>
+
+      <small class="d-block mt-2 text-muted" style="opacity:.85;">Preparing the site...</small>
+    </div>
+  </div>
 
     <div class="container-fluid" style="padding: 0px;overflow: hidden;">
         <div class="row">
@@ -142,7 +182,7 @@
 <div class="container-fluid" style="padding: 0px;overflow: hidden;">
   <div class="row">
     <div class="col-lg-12">
-      <img src="images/exhiban.png" loading="lazy"  width="100%"  alt="">
+      <img src="images/exhiba.jpeg" loading="lazy"  width="100%"  alt="">
     </div>
   </div>
 </div>
@@ -343,7 +383,7 @@
           </ul>
           <div class="imn">
           <img src="images/esix.jpg" width="90px" height="70px" alt="">
-          <img src="images/shanghai-building.jpg" width="90px" height="70px" alt="">
+          <img src="images/formcon.jpg" width="90px" height="70px" alt="">
           <img src="images/form.jpg" width="90px" height="70px" alt="">
           <img src="images/abtn.jpg" width="90px" height="70px" alt="">
           
@@ -362,7 +402,7 @@
     </div>
   </div>
 </footer>
-<a href="tel:+919876543210" class="phone-btn" title="Call Us">
+<a href="tel:+917406213220" class="phone-btn" title="Call Us">
   <i class="bi bi-telephone-fill"></i>
 </a>
 <div class="chatbot-btn" id="chatbotBtn">
@@ -393,7 +433,7 @@
 <button class="fire-scroll-top" id="fireScrollTop">
     <i class="bi bi-arrow-up-short"></i>
   </button>
-  div class="whatsapp-icon whatsapp-float">
+  <div class="whatsapp-icon whatsapp-float">
   <a 
     href="https://wa.me/917708097999?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20Build%20Tec%20Expo.%20Could%20you%20please%20provide%20more%20details%20about%20exhibitor%20registration%2C%20stall%20booking%2C%20and%20visitor%20passes%3F"
     target="_blank">
@@ -513,6 +553,58 @@
     scrollBtn.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
+  </script>
+  <script>
+    (function () {
+      const progressEl = document.getElementById('progressValue');
+      const preloader = document.getElementById('preloader');
+      const mainContent = document.getElementById('mainContent');
+      let progress = 0;
+
+      const schedule = [
+        { until: 40, step: 4, delay: 25 },
+        { until: 75, step: 3, delay: 40 },
+        { until: 92, step: 2, delay: 60 },
+        { until: 98, step: 1, delay: 90 },
+      ];
+
+      function tickStage(i) {
+        if (i >= schedule.length) return setTimeout(finishLoading, 250);
+        const stage = schedule[i];
+        const id = setInterval(() => {
+          progress = Math.min(progress + stage.step, stage.until);
+          progressEl.textContent = progress + '%';
+          if (progress >= stage.until) {
+            clearInterval(id);
+            tickStage(i + 1);
+          }
+        }, stage.delay);
+      }
+
+      function finishLoading() {
+        const id = setInterval(() => {
+          progress = Math.min(progress + 1, 100);
+          progressEl.textContent = progress + '%';
+          if (progress >= 100) {
+            clearInterval(id);
+            document.body.classList.add('loaded');
+            setTimeout(() => {
+              mainContent.style.visibility = 'visible';
+              preloader.style.display = 'none';
+            }, 650);
+          }
+        }, 24);
+      }
+
+      tickStage(0);
+      window.addEventListener('load', () => {
+        if (progress < 92) {
+          progress = 92;
+          progressEl.textContent = progress + '%';
+        }
+        setTimeout(finishLoading, 120);
+      });
+    })();
   </script>
 </body>
 </html>

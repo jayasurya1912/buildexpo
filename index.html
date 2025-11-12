@@ -17,6 +17,48 @@
 
 <body>
 
+
+  <div id="preloader" role="status" aria-live="polite" aria-label="Loading content">
+    <div class="loader-card">
+      <div class="building" aria-hidden="true">
+        <div class="antenna"></div>
+
+        <!-- windows grid -->
+        <div class="windows" aria-hidden="true">
+          <!-- 15 windows (3 cols x 5 rows) -->
+          <div class="window"><div class="lit"></div></div>
+          <div class="window"><div class="lit"></div></div>
+          <div class="window"><div class="lit"></div></div>
+
+          <div class="window"><div class="lit"></div></div>
+          <div class="window"><div class="lit"></div></div>
+          <div class="window"><div class="lit"></div></div>
+
+          <div class="window"><div class="lit"></div></div>
+          <div class="window"><div class="lit"></div></div>
+          <div class="window"><div class="lit"></div></div>
+
+          <div class="window"><div class="lit"></div></div>
+          <div class="window"><div class="lit"></div></div>
+          <div class="window"><div class="lit"></div></div>
+
+          <div class="window"><div class="lit"></div></div>
+          <div class="window"><div class="lit"></div></div>
+          <div class="window"><div class="lit"></div></div>
+        </div>
+
+        <div class="glint" aria-hidden="true"></div>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="fast-spinner" aria-hidden="true"></div>
+        <div class="progress-value" id="progressValue">0%</div>
+      </div>
+
+      <small class="d-block mt-2 text-muted" style="opacity:.85;">Preparing the site...</small>
+    </div>
+  </div>
+
    <div class="popup-overlay" id="popupOverlay">
     <div class="popup-card">
       <span class="close-btn" id="popupCloseBtn">&times;</span>
@@ -162,13 +204,13 @@
   <!-- Slides -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="images/banthree.png" class="d-block w-100 img-fluid" loading="lazy" alt="Banner 1">
+      <img src="images/banthre.jpeg" class="d-block w-100 img-fluid" loading="lazy" alt="Banner 1">
     </div>
     <div class="carousel-item">
-      <img src="images/bantwo.png" class="d-block w-100 img-fluid" loading="lazy" alt="Banner 2">
+      <img src="images/bantw.jpeg" class="d-block w-100 img-fluid" loading="lazy" alt="Banner 2">
     </div>
     <div class="carousel-item">
-      <img src="images/banone.png" class="d-block w-100 img-fluid" loading="lazy" alt="Banner 3">
+      <img src="images/banon.jpeg" class="d-block w-100 img-fluid" loading="lazy" alt="Banner 3">
     </div>
   </div>
 
@@ -301,7 +343,7 @@
 
       <!-- Right: Image -->
       <div class="col-lg-3 col-md-12 text-lg-end text-center mt-4 mt-lg-0 countdown-right">
-        <img src="images/7dd1e1ec-5bb1-44a8-8e6f-e45a8f3e6448-removebg-preview.png" loading="lazy" alt="Build Tec Expo Poster"
+        <img src="images/count.png" loading="lazy" alt="Build Tec Expo Poster"
              class="encount">
       </div>
 
@@ -319,7 +361,7 @@
         <!-- Left Image -->
         <div class="col-lg-6 fade-left">
           <div class="about-img">
-            <img src="images/glassclad-skyscrapers-central-mumbai-reflecting-sunset-hues-blue-hour.jpg" loading="lazy" alt="About Us">
+            <img src="images/violet.jpg" loading="lazy" alt="About Us">
           </div>
         </div>
 
@@ -671,7 +713,7 @@
           </ul>
           <div class="imn">
           <img src="images/esix.jpg" width="90px" loading="lazy" height="70px" alt="">
-          <img src="images/shanghai-building.jpg" loading="lazy" width="90px" height="70px" alt="">
+          <img src="images/formcon.jpg" loading="lazy" width="90px" height="70px" alt="">
           <img src="images/form.jpg" width="90px" loading="lazy" height="70px" alt="">
           <img src="images/abtn.jpg" width="90px" loading="lazy" height="70px" alt="">
           
@@ -718,7 +760,7 @@
 
 
 </div>
-<a href="tel:+919876543210" class="phone-btn" title="Call Us">
+<a href="tel:+917406213220" class="phone-btn" title="Call Us">
   <i class="bi bi-telephone-fill"></i>
 </a>
 
@@ -966,6 +1008,86 @@
           console.error("EmailJS Error:", error);
         });
     });
+  </script>
+   <script>
+    // FAST loader logic: increments quickly then fades
+    (function () {
+      const progressEl = document.getElementById('progressValue');
+      const preloader = document.getElementById('preloader');
+      const mainContent = document.getElementById('mainContent');
+
+      // Simulated fast progress algorithm:
+      let progress = 0;
+
+      // Determine increments to feel quick but smooth
+      // Start quick then ease to 100
+      const schedule = [
+        { until: 40, step: 4, delay: 25 },
+        { until: 75, step: 3, delay: 40 },
+        { until: 92, step: 2, delay: 60 },
+        { until: 98, step: 1, delay: 90 },
+      ];
+
+      function tickStage(i) {
+        if (i >= schedule.length) {
+          // complete with a short timeout so user sees 99→100
+          setTimeout(() => finishLoading(), 250);
+          return;
+        }
+        const stage = schedule[i];
+        const id = setInterval(() => {
+          progress = Math.min(progress + stage.step, stage.until);
+          progressEl.textContent = progress + '%';
+          if (progress >= stage.until) {
+            clearInterval(id);
+            tickStage(i + 1);
+          }
+        }, stage.delay);
+      }
+
+      function finishLoading() {
+        // Fill to 100 fast
+        const id = setInterval(() => {
+          progress = Math.min(progress + 1, 100);
+          progressEl.textContent = progress + '%';
+          if (progress >= 100) {
+            clearInterval(id);
+            // reveal main content and fade out preloader
+            document.body.classList.add('loaded');
+            // small delay to allow fade transition
+            setTimeout(() => {
+              mainContent.style.visibility = 'visible';
+              preloader.style.display = 'none';
+            }, 650);
+          }
+        }, 24);
+      }
+
+      // Start the schedule
+      tickStage(0);
+
+      // Also remove preloader if real page load completes earlier (defensive)
+      window.addEventListener('load', () => {
+        // if progress hasn't reached 90+ quickly, jump to finish
+        if (progress < 92) {
+          progress = 92;
+          progressEl.textContent = progress + '%';
+        }
+        // finish after very short delay
+        setTimeout(finishLoading, 110);
+      });
+
+      // Accessibility: allow skipping loader with Escape
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          progress = 100;
+          progressEl.textContent = '100%';
+          document.body.classList.add('loaded');
+          mainContent.style.visibility = 'visible';
+          preloader.style.display = 'none';
+        }
+      });
+    })();
   </script>
 </body>
 </html>
