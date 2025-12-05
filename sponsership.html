@@ -102,16 +102,7 @@
         
 
         <!-- Right Menu -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle left-gap" href="#" id="partnersDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            VISITORS
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="partnersDropdown">
-            <li><a class="dropdown-item" href="visitors.html">VISITORS</a></li>
-            <li><a class="dropdown-item" href="images/floorplan.pdf">FLOOR PLAN</a></li>
-            <li><a class="dropdown-item" href="images/broucher.pdf">BROCHURE</a></li>
-          </ul>
-        </li>
+        <li class="nav-item"><a class="nav-link"  href="visitors.html">VISITORS</a></li>
         <li class="nav-item">
   <a class="nav-link right-gap" style="background-color: black;color: white;"  href="sponsership.html">
     SPONSORSHIP
@@ -349,13 +340,26 @@ Discover breakthrough technologies, smart building solutions, advanced machinery
 
         </div>
 
+         <div class="container mt-4" style="margin-bottom: 30px;">
+        <div class="row">
+            <div class="col-lg-4">
+
+            </div>
+            <div class="col-lg-4">
+                <img src="images/fotin.png" width="100%" alt="">
+            </div>
+            <div class="col-lg-4">
+
+            </div>
+        </div>
+    </div>
         
       </div>
 
       <hr class="my-4 border-light">
 
       <div class="text-center small">
-        © 2025 Build Tec Expo. All Rights Reserved.Developed by <a href="https://www.webads.live/" style="text-decoration: none;color: white;">Webads</a>
+        © 2025 Build Tec Expo. All Rights Reserved.Developed by <a href="https://www.webads.live/" style="text-decoration: none;color: white;">Tech Mayon</a>
       </div>
     </div>
   </div>
@@ -478,7 +482,7 @@ Discover breakthrough technologies, smart building solutions, advanced machinery
   <script>
     
     // Initialize EmailJS
-    emailjs.init("KMyyQryEe215wzBPG"); // 🔹 Replace with your EmailJS public key
+    emailjs.init("gRfuwtrE6IK1OagQ2"); // 🔹 Replace with your EmailJS public key
 
     // Handle form submission
     document.getElementById("sponsorForm").addEventListener("submit", function (e) {
@@ -497,7 +501,7 @@ Discover breakthrough technologies, smart building solutions, advanced machinery
       console.log("Sending data:", templateParams); // ✅ Debug log
 
       // Send email via EmailJS
-      emailjs.send("service_0zhux7b", "template_0uj364j", templateParams)
+      emailjs.send("service_pn8e70h", "template_ool8d07", templateParams)
         .then(function (response) {
           alert(" Thank you for contacting us. We will get back to you soon.");
           document.getElementById("sponsorForm").reset();

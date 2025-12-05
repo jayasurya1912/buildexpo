@@ -59,20 +59,7 @@
     </div>
   </div>
 
-   <div class="popup-overlay" id="popupOverlay">
-    <div class="popup-card">
-      <span class="close-btn" id="popupCloseBtn">&times;</span>
-      <img src="images/mainlogo.png" width="100%" alt="Logo" loading="lazy" style="border-radius: 15px;">
-      <h4 class="mt-3">Build Tec Expo Countdown</h4>
-      <div class="countdown" id="countdownDisplay">Loading countdown...</div>
-      <p style="color: black;">
-        Join India’s most dynamic platform driving innovation in construction and infrastructure technology. Discover smart solutions, cutting-edge materials, and future-ready opportunities!
-      </p>
-      <a href="contact.html" class="btn rounded-pill px-4" style="background-color: #FFD700 ; color: white;">
-        Book Now
-      </a>
-    </div>
-  </div>
+ 
 
 
   <div class="container-fluid" style="padding: 0px;overflow: hidden;">
@@ -118,16 +105,7 @@
         
 
         <!-- Right Menu -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle left-gap" href="#" id="partnersDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            VISITORS
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="partnersDropdown">
-            <li><a class="dropdown-item" href="visitors.html">VISITORS</a></li>
-            <li><a class="dropdown-item" href="images/floorplan.pdf">FLOOR PLAN</a></li>
-            <li><a class="dropdown-item" href="images/broucher.pdf">BROCHURE</a></li>
-          </ul>
-        </li>
+        <li class="nav-item"><a class="nav-link"  href="visitors.html">VISITORS</a></li>
         <li class="nav-item">
   <a class="nav-link right-gap" href="sponsership.html">
     SPONSORSHIP
@@ -631,46 +609,52 @@
 </section>
 
   
+<!-- Popup Overlay -->
+<!-- Contact Form Popup -->
+<div id="contactPopupOverlay" class="contact-popup-overlay">
+  <div class="popup-box">
 
-  <div class="container my-5">
-  <div class="row contact-section">
-    <!-- Left Image -->
-    <div class="col-md-6 p-0">
-      <img src="images/form.jpg" loading="lazy" alt="Contact Us" loading="lazy" class="contact-img">
-    </div>
+    <!-- Close Button -->
+    <button class="close-btn" id="closeContactPopup">&times;</button>
 
-    <!-- Right Form -->
-    <div class="col-md-6 contact-form">
-      <h3 class="fw-bold text-black mb-3">Send Us a Message</h3>
-      <p class="text-black">Have a project in mind or need expert advice? Fill out the form below and we’ll get back to you within 24 hours.</p>
-
-       <form id="contactForm">
-      <div class="mb-3">
-        <label class="form-label" style="color: black;">Full Name</label>
-        <input type="text" class="form-control" id="fullName" placeholder="Full Name" required>
+    <div class="row g-0">
+      <div class="col-md-6 d-none d-md-block">
+        <img src="images/form.jpg" class="img-fluid popup-img">
       </div>
 
-      <div class="mb-3">
-        <label class="form-label" style="color: black;">Email Address</label>
-        <input type="email" class="form-control" id="email" placeholder="Email" required>
-      </div>
+      <div class="col-md-6 p-4">
+        <h3 class="fw-bold text-black mb-3">Send Us a Message</h3>
+        <p class="text-black">Fill out the form below and we’ll respond within 24 hours.</p>
 
-      <div class="mb-3">
-        <label class="form-label" style="color: black;">Phone Number</label>
-        <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
-      </div>
+        <form id="contactForm">
+          <div class="mb-3">
+            <label class="form-label text-black">Full Name</label>
+            <input type="text" class="form-control" id="fullName">
+          </div>
 
-      <div class="mb-3">
-        <label class="form-label" style="color: black;">Message</label>
-        <textarea class="form-control" id="message" rows="4" placeholder="Message" required></textarea>
-      </div>
+          <div class="mb-3">
+            <label class="form-label text-black">Email</label>
+            <input type="email" class="form-control" id="email">
+          </div>
 
-      <button type="submit" class="btn submit-btn " style="background-color: white; color:black;">Submit</button>
-      <div class="privacy-note text-center text-black">We respect your privacy. Your information is safe with us and will never be shared.</div>
-    </form>
+          <div class="mb-3">
+            <label class="form-label text-black">Phone</label>
+            <input type="tel" class="form-control" id="phone">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label text-black">Message</label>
+            <textarea class="form-control" id="message" rows="3"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-dark w-100">Submit</button>
+        </form>
+      </div>
     </div>
   </div>
 </div>
+
+
 
 
 <footer class="footer-section text-white ">
@@ -730,10 +714,24 @@ Discover breakthrough technologies, smart building solutions, advanced machinery
         
       </div>
 
+       <div class="container mt-4" style="margin-bottom: 30px;">
+        <div class="row">
+            <div class="col-lg-4">
+
+            </div>
+            <div class="col-lg-4">
+                <img src="images/fotin.png" width="100%" alt="">
+            </div>
+            <div class="col-lg-4">
+
+            </div>
+        </div>
+    </div>
+
       <hr class="my-4 border-light">
 
       <div class="text-center small">
-        © 2025 Build Tec Expo. All Rights Reserved.Developed by <a href="https://www.webads.live/" style="text-decoration: none;color: white;">Webads</a>
+        © 2025 Build Tec Expo. All Rights Reserved.Developed by <a href="https://www.webads.live/" style="text-decoration: none;color: white;">Tech Mayon</a>
       </div>
     </div>
   </div>
@@ -765,7 +763,7 @@ Discover breakthrough technologies, smart building solutions, advanced machinery
 
  <script>
     // Set target date
-    const targetDate = new Date("july 24, 2026 09:00:00").getTime();
+    const targetDate = new Date("sept 04, 2026 09:00:00").getTime();
 
     const timer = setInterval(function() {
       const now = new Date().getTime();
@@ -930,55 +928,7 @@ Discover breakthrough technologies, smart building solutions, advanced machinery
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   </script>
-   <script>
-    // 🎯 Event Date (Target)
-    const eventDate = new Date("july 24, 2026 00:00:00").getTime();
-    const countdownDisplay = document.getElementById("countdownDisplay");
-
-    // ⏳ Countdown Function
-    function showCountdown() {
-      const now = new Date().getTime();
-      const remainingTime = eventDate - now;
-
-      if (remainingTime <= 0) {
-        countdownDisplay.innerHTML = "Event Started!";
-        clearInterval(countdownTimer);
-        return;
-      }
-
-      const daysLeft = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-      const hoursLeft = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutesLeft = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-      const secondsLeft = Math.floor((remainingTime % (1000 * 60)) / 1000);
-
-      countdownDisplay.innerHTML = `${daysLeft}d ${hoursLeft}h ${minutesLeft}m ${secondsLeft}s left`;
-    }
-
-    // 🔁 Update countdown every second
-    const countdownTimer = setInterval(showCountdown, 1000);
-    showCountdown();
-
-    // 💡 Popup Logic
-    const popupOverlay = document.getElementById("popupOverlay");
-    const popupCloseBtn = document.getElementById("popupCloseBtn");
-
-    // Show popup after 7 seconds
-    setTimeout(() => {
-      popupOverlay.classList.add("show");
-    }, 7000);
-
-    // Close popup on click of "X"
-    popupCloseBtn.addEventListener("click", () => {
-      popupOverlay.classList.remove("show");
-    });
-
-    // Close popup when clicking outside
-    popupOverlay.addEventListener("click", (event) => {
-      if (event.target === popupOverlay) {
-        popupOverlay.classList.remove("show");
-      }
-    });
-  </script>
+  
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
     // ✅ Initialize EmailJS
@@ -1088,5 +1038,27 @@ Discover breakthrough technologies, smart building solutions, advanced machinery
       });
     })();
   </script>
+
+  <script>
+  // Auto open the popup in 3 seconds
+  setTimeout(() => {
+    document.getElementById("contactPopupOverlay").style.display = "flex";
+  }, 3000);
+
+  // Close on button click
+  document.getElementById("closeContactPopup").onclick = () => {
+    document.getElementById("contactPopupOverlay").style.display = "none";
+  };
+
+  // Close when clicking outside popup box
+  window.addEventListener("click", (e) => {
+    const overlay = document.getElementById("contactPopupOverlay");
+    if (e.target === overlay) {
+      overlay.style.display = "none";
+    }
+  });
+</script>
+
+
 </body>
 </html>
